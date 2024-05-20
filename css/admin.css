@@ -1,0 +1,147 @@
+/*inithialize*/
+
+:root {
+    --main-color: #5ba515;
+    --main-paddingforsection: 150px;
+    --secondry-color: #498313;
+    --main-transition: all 0.3s ease 0s;
+}
+
+/*inithialize*/
+
+.section {
+    background-image: url(../landing-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 983px;
+    position: relative;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(45deg , var(--main-color) , var(--secondry-color));
+    opacity: 0.5;
+}
+
+.section .container .form {
+    position: absolute;
+    background-color: white;
+    border-radius: 2em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    padding: 80px 40px;
+}
+
+.section .container .header3 h1 {
+    margin: 0px 0px 60px 0px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 6px;
+}
+
+.section .container .form form div {
+    margin-bottom: 40px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.section .container .form form div:nth-child(4) input {
+    margin-top: 10px;
+}
+
+.section .container .form form div:nth-child(2) input {
+    margin-top: 10px;
+}
+
+.section .container .form form input[type="text"] , .section .container .form form input[type="file"] {
+    padding: 15px 28px;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #F5F5F5;
+    border-radius: 2em;
+}
+
+.section .container .form form .add {
+    width: 100%;
+    padding: 12px 25px;
+    border: none;
+    position: relative;
+    font-weight: bold;
+    color: white;
+    background-color: var(--main-color);
+    overflow: hidden;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.section .container .form form .add span {
+    position: relative;
+}
+
+.section .container .form form .add::before {
+    content: "";
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 0px;
+    position: absolute;
+    background-color: var(--secondry-color);
+    transition: var(--main-transition);
+}
+
+.section .container .form form .add:hover::before {
+    width: 100%;
+}
+
+.state {
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+.form .back {
+    width: 100%;
+    padding: 12px 25px;
+    border: none;
+    position: relative;
+    font-weight: bold;
+    background-color: #F94449;
+    overflow: hidden;
+    border-radius: 2em;
+    cursor: pointer;
+    color: white;
+}
+
+.form .back span {
+    position: relative;
+}
+
+.form .back a {
+    color: white;
+    position: relative;
+}
+
+.form .back::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    transition: var(--main-transition);
+    background-color: #FF0000;
+}
+
+.form .back:hover::before {
+    width: 100%;
+}
+
