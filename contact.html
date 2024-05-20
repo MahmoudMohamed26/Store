@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/contact.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;1,900&display=swap" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>BOTANICAL | CONTACT</title>
+</head>
+<body>
+
+	<div class="header">
+        <div class="container">
+            <div>
+                <i class="fa-solid fa-phone fa-fw icon"></i>
+                <p>Hotline: (602) 462 8889</p>
+            </div>
+            <div>
+                <p>Wellcome To Botanical Store</p>
+            </div>
+            <div>
+                <p>Currency: <span>USD</span></p>
+                <p>Languages: <span>EN</span></p>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="imgs/logo.png" width="120px" alt="">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="shop.php">Shop</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.php">Blog</a></li>
+                </ul>
+            </div>
+            <div class="last">
+                <i class="fa-solid fa-magnifying-glass fa-fw icon"></i>
+                <i class="fa-regular fa-heart fa-fw icon"></i>
+                <a href="cart.php" class="notfication"><i class="fa-solid fa-cart-shopping fa-fw icon"></i>
+                <span>5</span>
+                </a>
+            </div>
+            <div class="bars">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="mega_menu">
+                <ul>
+                    <li><a href="index.php"><span>HOME</span></a></li>
+                    <li><a href="shop.php"><span>SHOP</span></a></li>
+                    <li><a href="about.php"><span>ABOUT</span></a></li>
+                    <li><a href="contact.html"><span>CONTACT</span></a></li>
+                    <li><a href="cart.php"><span>CART</span></a></li>
+                    <li><a href="blog.php"><span>BLOG</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="landing2">
+        <div class="container">
+            <div>
+                <h2 class="heading_style">CONTACT</h2>
+            </div>
+        </div>
+    </div>
+
+	<div class="form">
+		<div class="container">
+			<main class="row">
+				
+	
+				<section class="col left">
+					
+	
+					<div class="contactTitle">
+						<h2>Get In Touch</h2>
+						<p>If you have any problems or suggestions please leave a massege</p>
+					</div>
+					<div class="contactInfo">
+						
+						<div class="iconGroup">
+							<div class="icon">
+								<i class="fa-solid fa-phone"></i>
+							</div>
+							<div class="details">
+								<span>Phone</span>
+								<span>+201027099256</span>
+							</div>
+						</div>
+	
+						<div class="iconGroup">
+							<div class="icon">
+								<i class="fa-solid fa-envelope"></i>
+							</div>
+							<div class="details">
+								<span>Email</span>
+								<span>BotanicalStore@gmail.com</span>
+							</div>
+						</div>
+	
+						<div class="iconGroup">
+							<div class="icon">
+								<i class="fa-solid fa-location-dot"></i>
+							</div>
+							<div class="details">
+								<span>Location</span>
+								<span>27 Talaat-harb street - Eltahrir - Cairo</span>
+							</div>
+						</div>
+	
+					</div>
+	
+	
+					<div class="socialMedia">
+						<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+						<a href="#"><i class="fa-brands fa-twitter"></i></a>
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
+						<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+					</div>
+	
+					
+				</section>
+				<section class="col right">
+					
+	
+					<form class="messageForm" method="post"  action="contact.php">
+						
+						<div class="inputGroup halfWidth">
+							<input type="text" name="name" required="required">
+							<label>Your Name</label>
+						</div>
+	
+						<div class="inputGroup halfWidth">
+							<input type="text" name="email" required="required">
+							<label>Email</label>
+						</div>
+	
+						<div class="inputGroup fullWidth">
+							<input type="text" name="subject" required="required">
+							<label>Subject</label>
+						</div>
+	
+						<div class="inputGroup fullWidth">
+							<textarea required="required" name="msg"></textarea>
+							<label>Say Something</label>
+						</div>
+	
+						<div class="inputGroup fullWidth">
+							<button type="submit"><span>Send Message</span></button>
+							<p id="contact_msg" style="margin-top: 15px;"></p>
+						</div>
+	
+					</form>
+
+					<script>
+						const form = document.querySelector(".messageForm")
+						form.addEventListener("submit", async function(event) {
+							event.preventDefault()
+							
+							const formData = new FormData(form)
+							const response = await fetch("http://localhost:8088/web%20project/contact.php", {
+								method: "POST",
+								body: formData
+							})
+							const data = await response.text()
+							document.querySelector("#contact_msg").textContent = data
+						})
+					</script>
+	
+				</section>
+
+
+	
+	
+			</main>
+	
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="section">
+				<div class="element">
+					<img src="imgs/logo.png" alt="" />
+					<div>
+						<i class="fa-solid fa-location-dot fa-fw icon"></i>
+						<p>Address: 27 Talaat-harb street - Eltahrir - Cairo.</p>
+					</div>
+					<div>
+						<i class="fa-solid fa-phone fa-fw icon"></i>
+						<p>Phone : (+032) 3456 7890</p>
+					</div>
+					<div>
+						<i class="fa-solid fa-envelope fa-fw icon"></i>
+						<p>
+							Email:
+							<a href="mailto:Botanicalstore@gmail.com">Botanicalstore@gmail.com</a>
+						</p>
+					</div>
+					<div>
+						<p>Follow us :</p>
+						<ul>
+							<li><i class="fa-brands fa-facebook fa-fw icon"></i></li>
+							<li><i class="fa-brands fa-instagram fa-fw icon"></i></li>
+							<li><i class="fa-brands fa-linkedin fa-fw icon"></i></li>
+							<li><i class="fa-brands fa-youtube fa-fw icon"></i></li>
+						</ul>
+					</div>
+				</div>
+				<div class="element2">
+					<h3>information</h3>
+					<ul>
+						<li><a href="#">Our Blog</a></li>
+						<li><a href="#">Top Sellers</a></li>
+						<li><a href="#">Our Blog</a></li>
+						<li><a href="#">About Our Shop</a></li>
+						<li><a href="#">Privacy policy</a></li>
+					</ul>
+				</div>
+				<div class="element2">
+					<h3>my account</h3>
+					<ul>
+						<li><a href="#">My account</a></li>
+						<li><a href="#">Discount</a></li>
+						<li><a href="#">Orders history</a></li>
+						<li><a href="#">Personal information</a></li>
+					</ul>
+				</div>
+                <div class="element2">
+					<h3>products</h3>
+					<ul>
+						<li><a href="#">Delivery</a></li>
+						<li><a href="#">Legal notice</a></li>
+						<li><a href="#">Prices drop</a></li>
+						<li><a href="#">New products</a></li>
+						<li><a href="#">Best sales</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="copyrights">
+				<div class="container">
+                    <p>
+                        Coppyright 2023-2024 by <span>&copy;Team Members</span> - All right
+                        reserved
+                    </p>
+                </div>
+			</div>
+	</footer>
+
+</body>
+</html>
